@@ -25,13 +25,13 @@ const BarChart = ({ data }) => {
                   "this.getLabelForValue(value) = ",
                   this.getLabelForValue(value)
                 );
-                if (this.getLabelForValue(value) == 5) {
-                  return "long run";
-                }
-                if (this.getLabelForValue(value) == 0) {
+
+                if (this.getLabelForValue(value) == 1) {
+                  console.log("passssss........");
                   return "pass";
-                }
-                if (this.getLabelForValue(value) == 28) {
+                } else if (this.getLabelForValue(value) == 5) {
+                  return "long-run";
+                } else if (this.getLabelForValue(value) == 29) {
                   return "steal";
                 } else {
                   return this.getLabelForValue(value);

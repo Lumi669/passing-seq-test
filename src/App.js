@@ -9,7 +9,7 @@ const App = () => {
     datasets: [
       {
         label: "pass",
-        data: [0, 0, 0, 0, 0, 0],
+        data: [1, 1, 1, 1, 1, 1],
         borderWidth: 6,
         borderColor: "red",
         fill: false,
@@ -23,7 +23,7 @@ const App = () => {
       },
       {
         label: "steal",
-        data: [28, 28, 28, 28, 28, 28, 28],
+        data: [29, 29, 29, 29, 29, 29, 29],
         borderWidth: 6,
         borderColor: "purple",
         fill: false,
