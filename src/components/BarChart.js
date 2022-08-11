@@ -8,7 +8,7 @@ const BarChart = ({ data }) => {
   return (
     <Line
       data={data}
-      height={400}
+      height={900}
       width={400}
       options={{
         maintainAspectRatio: false,
