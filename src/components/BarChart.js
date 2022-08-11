@@ -14,11 +14,11 @@ const BarChart = ({ data }) => {
         maintainAspectRatio: false,
         scales: {
           y: {
+            display: true,
+            beginAtZero: true,
+            min: -1,
+            max: 45,
             ticks: {
-              beginAtZero: true,
-              min: 0,
-              max: 45,
-
               callback: function (value, index) {
                 console.log("apple");
                 console.log(
