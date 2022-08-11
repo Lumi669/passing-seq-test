@@ -16,7 +16,7 @@ const BarChart = ({ data }) => {
           y: {
             display: true,
             beginAtZero: true,
-            min: -1,
+            min: 0,
             max: 45,
             ticks: {
               font: {
@@ -29,14 +29,22 @@ const BarChart = ({ data }) => {
                   this.getLabelForValue(value)
                 );
 
-                if (this.getLabelForValue(value) == 1) {
-                  console.log("passssss........");
+                if (
+                  this.getLabelForValue(value) > 0 &&
+                  this.getLabelForValue(value) <= 2
+                ) {
                   return "pass";
-                } else if (this.getLabelForValue(value) == 5) {
+                } else if (
+                  this.getLabelForValue(value) > 4.5 &&
+                  this.getLabelForValue(value) <= 6
+                ) {
                   return "long-run";
-                } else if (this.getLabelForValue(value) == 29) {
+                } else if (
+                  this.getLabelForValue(value) > 28.5 &&
+                  this.getLabelForValue(value) <= 30
+                ) {
                   return "steal";
-                } else if (this.getLabelForValue(value) <= 0) {
+                } else if (this.getLabelForValue(value) < 0) {
                   return "";
                 } else {
                   return this.getLabelForValue(value);
