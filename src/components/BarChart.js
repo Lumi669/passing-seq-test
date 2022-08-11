@@ -32,7 +32,16 @@ const BarChart = ({ data }) => {
           tooltip: {
             callbacks: {
               label: (tooltipItem, data) => {
-                console.log(tooltipItem);
+                console.log(tooltipItem.datasetIndex);
+                if (tooltipItem.datasetIndex === 0) {
+                  return "pass";
+                }
+                if (tooltipItem.datasetIndex === 1) {
+                  return "long run";
+                }
+                if (tooltipItem.datasetIndex === 2) {
+                  return "steal";
+                }
               },
             },
           },
