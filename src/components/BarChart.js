@@ -19,16 +19,22 @@ const BarChart = ({ data }) => {
             min: -1,
             max: 45,
             ticks: {
+              stepSize: 1,
               callback: function (value, index) {
-                console.log("apple");
                 console.log(
-                  "this.getLabelForValue(index) = ",
-                  this.getLabelForValue(index)
+                  "this.getLabelForValue(value) = ",
+                  this.getLabelForValue(value)
                 );
-                if (this.getLabelForValue(index) === 2) {
+                if (this.getLabelForValue(value) == 5) {
+                  return "long run";
+                }
+                if (this.getLabelForValue(value) == 0) {
+                  return "pass";
+                }
+                if (this.getLabelForValue(value) == 28) {
                   return "steal";
                 } else {
-                  return "";
+                  return this.getLabelForValue(value);
                 }
               },
             },
