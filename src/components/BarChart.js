@@ -19,6 +19,9 @@ const BarChart = ({ data }) => {
             min: -1,
             max: 45,
             ticks: {
+              font: {
+                size: 29,
+              },
               stepSize: 1,
               callback: function (value, index) {
                 console.log(
@@ -33,6 +36,8 @@ const BarChart = ({ data }) => {
                   return "long-run";
                 } else if (this.getLabelForValue(value) == 29) {
                   return "steal";
+                } else if (this.getLabelForValue(value) <= 0) {
+                  return "";
                 } else {
                   return this.getLabelForValue(value);
                 }
@@ -42,7 +47,7 @@ const BarChart = ({ data }) => {
         },
         legend: {
           labels: {
-            fontSize: 25,
+            fontSize: 45,
           },
         },
 
