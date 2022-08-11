@@ -5,7 +5,7 @@ const BarChart = ({ data }) => {
   return (
     <Line
       data={data}
-      height={100}
+      height={400}
       width={400}
       options={{
         maintainAspectRatio: false,
@@ -14,6 +14,8 @@ const BarChart = ({ data }) => {
             {
               ticks: {
                 beginAtZero: true,
+                min: 0,
+                max: 45,
               },
             },
           ],
