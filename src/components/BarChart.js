@@ -27,8 +27,17 @@ const BarChart = ({ data }) => {
             fontSize: 25,
           },
         },
+
+        plugins: {
+          tooltip: {
+            callbacks: {
+              label: (tooltipItem, data) => {
+                console.log(tooltipItem);
+              },
+            },
+          },
+        },
       }}
-      // plugins={[ChartDataLabels]}
     />
   );
 };
