@@ -12,12 +12,20 @@ const BarChart = ({ data }) => {
       options={{
         maintainAspectRatio: false,
         scales: {
-          yAxes: [
+          y: [
             {
               ticks: {
                 beginAtZero: true,
                 min: 0,
                 max: 45,
+                callback: function (value, index) {
+                  console.log(this.getLabelForValue(index));
+                  if (this.getLabelForValue(index) === 2) {
+                    return "steal";
+                  } else {
+                    return "";
+                  }
+                },
               },
             },
           ],
