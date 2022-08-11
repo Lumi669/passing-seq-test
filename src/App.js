@@ -5,19 +5,28 @@ import "./App.css";
 
 const App = () => {
   const data = {
-    labels: ["3", "6", "5", "8", "2"],
+    labels: ["3", "6", "5", "8", "2", "9", "8", "2"],
     datasets: [
-      { fill: false },
       {
-        label: "# of votes",
+        label: "pass",
         data: [0, 0, 0, 0, 0, 0],
         borderWidth: 6,
+        borderColor: "red",
+        fill: false,
       },
       {
-        label: "Quantity",
+        label: "long-run",
         data: [5, 5, 5, 5],
-        backgroundColor: "orange",
-        borderColor: "red",
+        borderWidth: 6,
+        borderColor: "green",
+        fill: false,
+      },
+      {
+        label: "steal",
+        data: [28, 28, 28, 28, 28, 28, 28],
+        borderWidth: 6,
+        borderColor: "purple",
+        fill: false,
       },
     ],
   };
